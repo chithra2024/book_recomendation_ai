@@ -30,3 +30,7 @@ Thumbs.db
 
 # VSCode settings
 .vscode/
+
+
+# ignore git ignore file
+.gitignore
