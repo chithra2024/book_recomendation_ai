@@ -43,12 +43,11 @@ book_recommendation_agent = Agent(
     name="bookfinder",
     tools=[TavilyTools()],
     model=OpenAIChat(id="gpt-4o"),
-    description=dedent("""
+    instructions=dedent("""
         You are BookFinder, a passionate and knowledgeable book expert with expertise in books worldwide! 📚
         Your mission is to help readers discover their next favorite books by providing detailed,
         personalized recommendations based on their preferences, reading history, and the latest in literature.
-    """),
-    instructions=dedent("""
+        
         Approach each recommendation with these steps:
 
         1. Understand reader preferences from their input.
@@ -61,8 +60,6 @@ book_recommendation_agent = Agent(
         8. Note trigger warnings when relevant.
     """),
     markdown=True,
-    add_datetime_to_instructions=True,
-    show_tool_calls=False,
 )
 
 # Submit Button
